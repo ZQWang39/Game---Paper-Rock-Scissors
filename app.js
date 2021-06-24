@@ -3,6 +3,7 @@ const score = document.getElementById('score');
 const result = document.getElementById('result');
 const restart = document.getElementById('restart');
 const modal = document.querySelector('.modal');
+const modalContent = document.querySelector('.modal-content')
 
 //Characters
 const scoreBoard = {
@@ -99,11 +100,13 @@ function showWinner(winner, computerChoice){
     
     if (winner === "You"){
         scoreBoard.You++;
+        modalContent.style.backgroundColor = "teal";
         result.innerHTML = `<h1>(*^▽^*) You WIN!!!</h1>
         <i class="far fa-hand-${computerChoice} fa-10x" ></i>
         <p>AI chose <strong>${computerChoice}</strong></p>`
     }else if (winner === "AI"){
         scoreBoard.AI++;
+        modalContent.style.backgroundColor = "rgb(148, 205, 219)";
         result.innerHTML = `<h1>o(╥﹏╥)o You LOSE!!!</h1>
         <i class="far fa-hand-${computerChoice} fa-10x" ></i>
         <p>AI chose <strong>${computerChoice}</strong></p>`
