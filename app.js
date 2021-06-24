@@ -111,6 +111,7 @@ function showWinner(winner, computerChoice){
         <i class="far fa-hand-${computerChoice} fa-10x" ></i>
         <p>AI chose <strong>${computerChoice}</strong></p>`
     }else{
+        modalContent.style.backgroundColor = "rgb(224, 224, 9)";
         result.innerHTML = `<h1>Draw!!!</h1>
         <i class="far fa-hand-${computerChoice} fa-10x" ></i>
         <p>AI chose <strong>${computerChoice}</strong></p>`
