@@ -101,16 +101,16 @@ function showWinner(winner, computerChoice){
         scoreBoard.You++;
         result.innerHTML = `<h1>(*^▽^*) You WIN!!!</h1>
         <i class="far fa-hand-${computerChoice} fa-10x" ></i>
-        <p>AI chose ${computerChoice}</p>`
+        <p>AI chose <strong>${computerChoice}</strong></p>`
     }else if (winner === "AI"){
         scoreBoard.AI++;
         result.innerHTML = `<h1>o(╥﹏╥)o You LOSE!!!</h1>
         <i class="far fa-hand-${computerChoice} fa-10x" ></i>
-        <p>AI chose ${computerChoice}</p>`
+        <p>AI chose <strong>${computerChoice}</strong></p>`
     }else{
         result.innerHTML = `<h1>Draw!!!</h1>
         <i class="far fa-hand-${computerChoice} fa-10x" ></i>
-        <p>AI chose ${computerChoice}</p>`
+        <p>AI chose <strong>${computerChoice}</strong></p>`
     }
 }
 
