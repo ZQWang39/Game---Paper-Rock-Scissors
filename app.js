@@ -57,10 +57,10 @@ choices.forEach(function(choice){
 function getComputerChoice(){
     const random = Math.random();
     //console.log(random);
-    if (random <= 0.33334) {
+    if (random <= 0.3333333334) {
         return "paper"
     }
-    else if (random >0.33334 && random <=0.6666667){
+    else if (random >0.3333333334 && random <=0.6666666667){
      return "rock"
     }else{
         return "scissors"
