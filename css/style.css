@@ -19,6 +19,8 @@ body{
     text-align: center;
 }
 .restart-btn{
+    display:none;
+    margin : 10px auto;
     background-color: rgb(14, 5, 80);
     color: whitesmoke;
     padding:0.4rem 1.3rem;

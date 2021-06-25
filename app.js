@@ -41,7 +41,7 @@ function play(e){
    window.addEventListener("click", clearModal);
    
    //Restart Game
-
+   restart.style.display = "block";
    restart.addEventListener('click', restartGame);
 
 }
