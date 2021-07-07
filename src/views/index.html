@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Paper Rock Scissors</title>
+</head>
+<body>
+    <div class="container">
+       <header class ="header">
+          <h1>Paper Rock Scissors</h1>
+          <button id="restart" class="restart-btn">Restart</button>
+          <div id = "score" class = "score">
+            <p>You:0</p>
+            <p>AI:0</p>
+          </div>
+       </header>
+       <h2>Please make your choice:</h2>
+       <div class="choices">
+            <i id ="paper"class="choice far fa-hand-paper fa-10x" ></i>
+            <i id ="rock" class="choice far fa-hand-rock fa-10x" ></i>
+            <i id ="scissors"class="choice far fa-hand-scissors fa-10x"></i>
+       </div>
+    </div>
+
+    <div class = "modal">
+        <div id="result" class="modal-content">
+           <!-- <h1>(*^▽^*)You WIN!!!</h1>
+            <i class="far fa-hand-paper fa-10x" ></i>
+            -->
+        </div>
+
+     </div>
+    
+     <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+       </script>
+</body>
+</html>
