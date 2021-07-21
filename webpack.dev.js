@@ -3,6 +3,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
     entry: './src/index.js',
@@ -26,6 +27,18 @@ module.exports = {
                 test: '/\.js$/',
                 exclude: /node_modules/,
                 loader: "babel-loader"
+            },
+            {
+                test: /\.(png|jpg)$/i,
+                use: [{
+                  loader:"file-loader",// "url-loader"
+                  options:{
+                    //limit:10*1024,
+                    name:"[hash:6].[ext]",
+                    outputPath:"assets/img",
+                    publicPath:"./assets/img"
+                  }
+                }]
             }
         ]
     },
@@ -43,5 +56,8 @@ module.exports = {
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
         }),
+        
+         new FaviconsWebpackPlugin('./src/img/logo.png'),
+         
     ]
 }
